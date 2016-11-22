@@ -1,0 +1,54 @@
+Zachary White
+V00759566
+
+Test 1: Inserting 'humpty'
+
+Input:  message = "Test 1: inserting 'humpty' -- ";
+        t = new BSTRefBased();
+        try {
+            t.insert("humpty");
+            System.out.println("root "+ t.getRootItem().getWord());
+            
+            result = t.getRootItem().getWord().equals("humpty");
+        } catch (Exception e) {
+            result = false;
+            e.printStackTrace();
+        }
+        System.out.println(message + (result ? "passed" : "FAILED"));
+        
+Output: Test 1: inserting 'humpty' -- passed
+
+
+Test 2: Inserting 'humpty', 'dumpty' and 'sat' 
+
+Input: 	message = "Test 2: inserting 'humpty', 'dumpty', 'sat' -- ";
+        t = new BSTRefBased();
+        try {
+            t.insert("humpty");
+            t.insert("dumpty");
+            t.insert("sat");
+            result = t.getRootItem().getWord().equals("humpty");
+            tt = t.detachLeftSubtree();
+            result &= tt.getRootItem().getWord().equals("dumpty");
+            tt = t.detachRightSubtree();
+            result &= tt.getRootItem().getWord().equals("sat");
+        } catch (Exception e) {
+            result = false;
+        	e.printStackTrace();
+        }
+        System.out.println(message + (result ? "passed" : "FAILED"));
+        
+Output: Test 2: inserting 'humpty', 'dumpty', 'sat' -- passed
+
+
+Test 3: retreiving 'sat'
+
+Input: 	WordRefs retrieve = t.retrieve("sat");
+
+        if (retrieve.getWord().equals("sat")){
+        	System.out.println("Test 3 (retrieve): Passed");
+        } else {
+        	System.out.println("Test 3 (retrieve): Failed");
+        }
+        
+Output: Test 3 (retrieve): Passed
