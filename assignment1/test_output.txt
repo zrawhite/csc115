@@ -1,0 +1,65 @@
+Zach White
+V00759566
+
+Tester Output and Description:
+
+This is the String array I have created to test the methods in BasicAligner.java:
+	String[] sequence = {"QWERTYUIOP", "UIO"};
+
+
+Test 1: This test is checking the output of the performAlignment method 
+		
+
+	Input:	test.performAlignment();
+	
+	Output: This test has no output. The way I was able to test this was by finding
+		the off set which will be presented later.
+
+
+Test 2: This test is checking the output of the getNumErrors method 
+	
+
+	Input: 	if (test.getNumErrors() == 0){
+			System.out.println("Test 2: Passed");
+		} else {
+			System.out.println("Test 2: FAILED");
+		}
+	
+	Output:	“Test 2: Passed”
+	
+
+Test 3: This test is checking the output of the getSequence method at position 0
+		
+
+	Input:	if (test.getSequence(0) == sequence[0]){
+			System.out.println("Test 3: Passed");
+		} else {
+			System.out.println("Test 3: FAILED");
+		}
+	
+	Output: “Test 3: Passed”
+	
+
+Test 4: This test is checking the output of the getSequence method at position 1
+		
+	
+	Input:	if (test.getSequence(1) == sequence[1]){
+			System.out.println("Test 4: Passed");
+		} else {
+			System.out.println("Test 4: FAILED");
+		}
+	
+	Output:	“Test 4: Passed”
+	
+	
+Test 5: This test is checking the output of the getOffset method
+		
+		
+	Input:	if (test.getOffset(1) == 6){
+			System.out.println("Test 5: Passed");
+		} else {
+			System.out.println("Test 5: FAILED");
+		}
+	
+	Output:	“Test 5: Passed”
+		
