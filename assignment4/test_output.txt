@@ -1,0 +1,137 @@
+Zach White
+V00759566
+
+Test output from InfixCalc.java
+
+Test 1: Testing tokenize method 
+        
+        Input:	String [] test1 = tokenize("3+4");
+        		int x = 0;
+        		if (test1[0].equals("3")){
+        			x++;
+       			}
+        		if (test1[1].equals("+")){
+        			x++;
+        		}
+        		if (test1[2].equals("4")){
+        			x++;	
+        		}
+        
+        		if (x == 3){
+        			System.out.println("Test 1 (tokenize): Passed");
+        		} else {
+        			System.out.println("Test 1 (tokenize): Failed");
+        		}
+        
+        Output: Test 1 (tokenize): Passed
+        
+        
+Test 2: Testing evaluatePostfix method
+        
+        Input:	StringList test2 = new StringList();
+        		test2.insertTail("3");
+        		test2.insertTail("4");
+        		test2.insertTail("+");
+        		String a = evaluatePostfix(test2);
+        		if (a.equals("7")){
+        			System.out.println("Test 2 (evaluatePostfix): Passed");
+        		} else {
+					System.out.println("Test 3 (evaluatePostfix): Failed");
+        		}
+        	
+        Output:	Test 2 (evaluatePostfix): Passed
+        
+ Test 3: Testing isBalanced method when string is balanced
+        
+        Input:	if (isBalanced("(3+5)*(6-9)")){
+        			System.out.println("Test 3 (isBalanced [y]): Passed");
+        		} else {
+        			System.out.println("Test 3 (isBalanced [y]): Failed");
+        		}
+        		
+        Output: Test 3 (isBalanced [y]): Passed
+        
+Test 4: Testing isBalanced method when string isn't balanced 
+        
+        Input:	if (isBalanced("(3+5)))))") == false){
+        			System.out.println("Test 4 (isBalanced [n]): Passed");
+        		} else {
+        			System.out.println("Test 4 (isBalanced [n]): Failed");
+        		}
+        		
+        Output: Test 4 (isBalanced [n]): Passedd
+
+        
+Test 5: Testing isInt method when string is an integer
+        
+        Input: 	if (isInt("5")){
+        			System.out.println("Test 5 (isInt [y]): Passed");
+       			} else {
+        			System.out.println("Test 5 (isInt [y]): Failed");
+        		}
+        		
+        Output: Test 5 (isInt [y]): Passed
+
+        
+Test 6: Testing isInt method when string isn't an integer
+        
+        Input:	if (isInt("a") == false){
+        			System.out.println("Test 6 (isInt [n]): Passed");
+       			} else {
+        			System.out.println("Test 6 (isInt [n]): Failed");
+        		}
+        		
+        Output: Test 6 (isInt [n]): Passed
+
+
+        
+Test 7: Testing toPostfix method
+        
+        Input:	StringList test7 = toPostfix(test1);
+        		String b = test7.retrieve(0);
+        		String c = test7.retrieve(1);
+        		String d = test7.retrieve(2);
+        
+        		if (b.equals("3") && c.equals("4") && d.equals("+")){
+        			System.out.println("Test 7 (toPostfix): Passed");
+        		} else {
+        			System.out.println("Test 7 (toPostfix): Failed");
+        		}
+        		
+        Output: Test 7 (toPostfix): Passed
+
+        
+        
+Test 8: Testing precedence method of operator /
+        
+        Input: 	int test8 = precedence("/");
+        		if(test8 == 3){
+        			System.out.println("Test 8 (precedence /): Passed");
+        		} else {
+        			System.out.println("Test 8 (precedence /): Failed");
+        		}
+        		
+        Output: Test 8 (precedence /): Passed
+
+        
+Test 9: Testing precedence method of operator *
+        
+        Input:	int test9 = precedence("*");
+        		if(test9 == 4){
+        			System.out.println("Test 8 (precedence *): Passed");
+        		} else {
+        			System.out.println("Test 8 (precedence *): Failed");
+        		}
+        		
+        Output:Test 9 (precedence *): Passed
+
+Test 10: Testing precedence method of operator +
+        
+        Input:	int test10 = precedence("+");
+        		if(test10 == 2){
+        			System.out.println("Test 10 (precedence +): Passed");
+        		} else {
+        			System.out.println("Test 10 (precedence +): Failed");
+        		}
+        		
+        Output: Test 10 (precedence +): Passed
