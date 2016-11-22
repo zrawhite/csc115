@@ -1,0 +1,159 @@
+Zach White
+V00759566
+
+Test output from WordList.java
+
+Test 1: This test checks to see if the list is empty before any insertion 
+		
+
+	Input:	passResult = list.isEmpty();
+			if (passResult){
+				System.out.println("\nTest 1: (Empty list)----------------Passed \n");
+			} else {
+				System.out.println("\nTest 1: (Empty list)----------------Failed \n");
+			}
+	
+	Output: "Test 1: (Empty list)----------------Passed"
+	
+
+Test 2: This test gets the length of the list before any insertion 
+		
+
+	Input:	if (list.getLength() == 0){
+				System.out.println("Test 2: (Length of empty list)------Passed \n");
+			} else {
+				System.out.println("Test 2: (Length of empty list)------Failed \n");
+			}
+	
+	Output: "Test 2: (Length of empty list)------Passed"
+	
+	
+Test 3: This test gets the length of the list after insertion of one node
+		
+
+	Input:	list.insertHead(new WordListNode("Hello"));
+			int length = list.getLength();
+			if (length == 1){
+				System.out.println("Test 3: (Length after 1 insert)-----Passed \n");
+			} else {
+				System.out.println("Test 3: (Length after 1 insert)-----Failed \n");
+			}
+	
+	Output: "Test 3: (Length after 1 insert)-----Passed"
+	
+	
+Test 4: This test checks if the list is empty after one insertion
+		
+
+	Input:	if (list.isEmpty() == false){
+				System.out.println("Test 4: (Empty after 1 insert)------Passed \n");
+			} else {
+				System.out.println("Test 4: (Empty after 1 insert)------Failed \n");
+			}
+	
+	Output: "Test 4: (Empty after 1 insert)------Passed"
+	
+	
+Test 5: This test retrieves the string after one insert
+		
+
+	Input:	String retrieve = list.retrieve(0);
+			if (retrieve == "Hello"){
+				System.out.println("Test 5: (Retrieve task #)-----------Passed \n");
+			} else {
+				System.out.println("Test 5: (Retrieve task #)-----------Failed \n");
+			}
+	
+	Output: "Test 5: (Retrieve string)-----------Passed"
+	
+	
+Test 6: This test removes the head and then checks to see if the list is empty
+		
+
+	Input:	list.removeHead();
+			if (list.getLength() == 0){
+				System.out.println("Test 6: (Head Removal)--------------Passed \n");
+			} else {
+				System.out.println("Test 6: (Head Removal)--------------Failed \n");
+			}
+	
+	Output: "Test 6: (Head Removal)--------------Passed"
+	
+
+
+Test output from Anagrammer.java
+
+Test 1: Testing to see if you can create a node.
+		
+	Input: 	WordListNode test1 = new WordListNode("Test");
+			if (test1.word == "Test"){
+				System.out.println("Test 1: Passed");
+			} else {
+				System.out.println("Test 1: Failed");
+			}
+	
+	Output: "Test 1: Passed"
+		
+Test 2: Testing to see if you can insertHead.
+		
+	Input:	WordList test2 = new WordList();
+			test2.insertHead(test1);
+			if (test2.retrieve(0) == "Test"){
+				System.out.println("Test 2: Passed");
+			} else {
+				System.out.println("Test 2: Failed");
+			}
+	
+	Output: "Test 2: Passed"
+		
+Test 3: Testing to see if you can removeHead.
+		
+	Input: test2.removeHead();
+			if(test2.isEmpty()){
+				System.out.println("Test 3: Passed");
+			} else {
+				System.out.println("Test 3: Failed");
+			}
+	
+	Output: "Test 3: Passed"
+		
+Test 4: Testing to see if the array was created
+		
+	Input: int count = 0;
+			if (a.dictionary1[0] == "may"){
+				count++;
+			}
+			if (a.dictionary1[1] == "june"){
+				count++;
+			}
+			if (a.dictionary1[2] == "july"){
+				count++;
+			}
+			
+			if (count == 3){
+				System.out.println("Test 4: Passed");
+			} else {
+				System.out.println("Test 4: Failed");
+			}
+	
+	Output: "Test 4: Passed"
+		
+Test 5: Testing to see if the string phrase was created 
+		
+	Input: 	if (a.phrase1 == "mayyluj"){
+				System.out.println("Test 5: Passed");
+			} else {
+				System.out.println("Test 5: Failed");
+			}
+	
+	Output: "Test 5: Passed"
+		
+Test 6: Testing to see if the maxWords int was created
+		
+	Input: 	if (a.maxWords1 == 2){
+				System.out.println("Test 6: Passed");
+			} else {
+				System.out.println("Test 6: Failed");
+			}
+			
+	Output: "Test 6: Passed"
