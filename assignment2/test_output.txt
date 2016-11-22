@@ -1,0 +1,141 @@
+Zach White
+V00759566
+
+Test output from TaskListTester.java
+
+Test 1: This test checks to see if the list is empty before any insertion 
+		
+
+	Input:	passResult = list.isEmpty();
+			if (passResult){
+				System.out.println("\nTest 1: (Empty list)----------------Passed \n");
+			} else {
+				System.out.println("\nTest 1: (Empty list)----------------Failed \n");
+			}
+	
+	Output: "Test 1: (Empty list)----------------Passed"
+	
+
+Test 2: This test gets the length of the list before any insertion 
+		
+
+	Input:	if (list.getLength() == 0){
+				System.out.println("Test 2: (Length of empty list)------Passed \n");
+			} else {
+				System.out.println("Test 2: (Length of empty list)------Failed \n");
+			}
+	
+	Output: "Test 2: (Length of empty list)------Passed"
+	
+	
+Test 3: This test gets the length of the list after insertion of one node
+		
+
+	Input:	list.insert(new Task(1,40));
+			int length = list.getLength();
+			if (length == 1){
+				System.out.println("Test 3: (Length after 1 insert)-----Passed \n");
+			} else {
+				System.out.println("Test 3: (Length after 1 insert)-----Failed \n");
+			}
+	
+	Output: "Test 3: (Length after 1 insert)-----Passed"
+	
+	
+Test 4: This test checks if the list is empty after one insertion
+		
+
+	Input:	if (list.isEmpty() == false){
+				System.out.println("Test 4: (Empty after 1 insert)------Passed \n");
+			} else {
+				System.out.println("Test 4: (Empty after 1 insert)------Failed \n");
+			}
+	
+	Output: "Test 4: (Empty after 1 insert)------Passed"
+	
+	
+Test 5: This test retrieves the task number after the insertion of one task 
+		
+
+	Input:	Task retrieve1 = list.retrieve(0);
+			if (retrieve1.number == 40){
+				System.out.println("Test 5: (Retrieve task #)-----------Passed \n");
+			} else {
+				System.out.println("Test 5: (Retrieve task #)-----------Failed \n");
+			}
+	
+	Output: "Test 5: (Retrieve task #)-----------Passed"
+	
+	
+Test 6: This test retrieves the task priority after the insertion of one task 
+		
+
+	Input:	if (retrieve1.priority == 1){
+				System.out.println("Test 6: (Retrieve task priority)----Passed \n");
+			} else {
+				System.out.println("Test 6: (Retrieve task priority)----Failed \n");
+			}
+	
+	Output: "Test 6: (Retrieve task priority)----Passed"
+	
+	
+Test 7: This test checks if the sequence is in correct order after inserting 4 tasks
+		
+
+	Input:	list.insert(new Task(2,50));
+			list.insert(new Task(3,30));
+			list.insert(new Task(4,22));
+		
+			retrieve1 = list.retrieve(0);
+			Task retrieve2 = list.retrieve(1);
+			Task retrieve3 = list.retrieve(2);
+			Task retrieve4 = list.retrieve(3);
+		
+			if (retrieve1.priority >= retrieve2.priority && retrieve2.priority >= retrieve3.priority && retrieve3.priority >= retrieve4.priority){
+				System.out.println("Test 7: (Sequence after 4 inserts)--Passed \n");
+			} else {
+				System.out.println("Test 7: (Sequence after 4 inserts)--Failed \n");
+			}
+	
+	Output: "Test 7: (Sequence after 4 inserts)--Passed"
+	
+	
+Test 8: This test checks to see how many nodes are in the list after one removal
+		
+
+	Input:	Task remove1 = list.remove(new Task(2,50));
+			if (list.getLength() == 3){
+				System.out.println("Test 8: (Remove one node)-----------Passed \n");
+			} else {
+				System.out.println("Test 8: (Remove one node)-----------Failed \n");
+			}
+	
+	Output: "Test 8: (Remove one node)-----------Passed"
+	
+	
+Test 9: This test checks to see how many nodes are in the list after removal of the head node
+		
+
+	Input:	list.removeHead();
+			if (list.getLength() == 2){
+				System.out.println("Test 9: (Head Removal)--------------Passed \n");
+			} else {
+				System.out.println("Test 9: (Head Removal)--------------Failed \n");
+			}
+	
+	Output: "Test 9: (Head Removal)--------------Passed"
+	
+	
+Test 10: This test checks to if the sequence is in order after the removals
+		
+
+	Input:	retrieve1 = list.retrieve(0);
+			retrieve2 = list.retrieve(1);
+			
+			if (retrieve1.priority == 3 && retrieve2.priority == 1){
+				System.out.println("Test 10: (sequence after removals)--Passed \n");
+			} else {
+				System.out.println("Test 10: (sequence after removals)--Failed \n");
+			}
+	
+	Output: "Test 10: (sequence after removals)--Passed"
